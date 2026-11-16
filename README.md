@@ -15,7 +15,7 @@ Kiến trúc xử lý dữ liệu thời gian thực (Real-time Streaming) phân
 **Bước 1: Khởi động hạ tầng lõi (Kafka, Zookeeper, Elasticsearch)**
 Mở Terminal tại thư mục gốc của dự án và chạy:
 ```bash
-docker compose up -d
+docker compose -f .\docker\docker-compose.yml up -d
 ```
 
 **Bước 2: Cấu hình môi trường Spark (ĐẶC BIỆT LƯU Ý CHO WINDOWS)**
