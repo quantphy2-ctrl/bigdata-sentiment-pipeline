@@ -218,3 +218,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# --- BỔ SUNG CHO DỰ ÁN BIG DATA (SPARK, HADOOP, DOCKER) ---
+# Bỏ qua các file tạm, thư viện Java và Hadoop của Spark
+.ivy2/
+checkpoint/
+C:/hadoop/
+spark-warehouse/
+
+# Bỏ qua data hệ thống của Docker
+docker/elasticsearch/data/
+docker/kafka/data/
+docker/zookeeper/data/
