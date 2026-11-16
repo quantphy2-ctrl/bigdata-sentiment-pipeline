@@ -222,6 +222,7 @@ __marimo__/
 # Bỏ qua các file tạm, thư viện Java và Hadoop của Spark
 .ivy2/
 checkpoint/
+checkpoints/
 C:/hadoop/
 spark-warehouse/
 
