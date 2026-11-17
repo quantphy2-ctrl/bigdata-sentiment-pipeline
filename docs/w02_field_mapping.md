@@ -62,26 +62,158 @@ Tập Test có nhãn 0, 2 và 4.
 
 Không được tự tạo nhãn neutral cho Training.
 
+
 ## 4. Quy tắc tạo event_id
 
-Không chỉ dùng tweet_id làm event_id vì dữ liệu khảo sát
-đã phát hiện những bản ghi trùng ID.
+### 4.1. Phương pháp triển khai thực tế
 
-Đề xuất tạo ID bằng cách kết hợp:
-- Tên dataset.
-- Tên tập train/test nếu có.
-- Số thứ tự dòng dữ liệu gốc.
+Đối với Sentiment140 Training, hệ thống tạo event_id
+bằng cách kết hợp:
+
+- Tiền tố nguồn dữ liệu: s140_train.
+- ID tweet gốc: ids.
+- Số thứ tự của bản ghi trong nhóm cùng ID: id_sequence.
+
+Công thức:
+
+event_id = "s140_train_" + ids + "_" + id_sequence
 
 Ví dụ:
-airline_row_00000002
-s140_train_row_00000001
 
-Số dòng phải được xác định ổn định từ file gốc.
+- s140_train_1467810369_1
+- s140_train_1467810369_2
+- s140_train_1467810672_1
 
-Mục tiêu:
-- Tránh các bản ghi khác nhau ghi đè nhau.
-- Có thể truy vết về dòng dữ liệu nguồn.
-- Chạy lại cùng file không tạo ID ngẫu nhiên mới.
+### 4.2. Công cụ và phương pháp
+
+Sử dụng Spark SQL Window Function:
+
+- partitionBy("ids"): Nhóm các bản ghi cùng ID gốc.
+- orderBy("target", "date", "flag", "user", "text"):
+  Sắp xếp các bản ghi trong từng nhóm.
+- row_number(): Đánh số thứ tự từ 1 trong mỗi nhóm.
+
+Phương pháp này cho phép giữ lại các bản ghi có ID
+gốc trùng nhau mà không tạo event_id trùng nhau.
+
+### 4.3. Kết quả kiểm định
+
+Trên Sentiment140 Training:
+
+- Tổng bản ghi: 1.600.000.
+- Event ID duy nhất: 1.600.000.
+- Event ID trùng: 0.
+- Event ID rỗng: 0.
+
+Kết quả kiểm định sau khi xuất Parquet đạt yêu cầu.
+
+### 4.4. Giới hạn của phương pháp
+
+Nếu các bản ghi có cùng ID và cùng toàn bộ giá trị
+dùng để sắp xếp, row_number() không bảo đảm thứ tự
+gán số cho từng dòng vật lý qua các lần thực thi.
+
+Do đó, phương pháp hiện tại bảo đảm tính duy nhất
+trong kết quả đã kiểm định, nhưng chưa bảo đảm
+truy vết chính xác về từng dòng CSV gốc.
+
+Để bảo đảm truy vết theo dòng nguồn trong tương lai,
+cần bổ sung vị trí dòng gốc hoặc một định danh nguồn
+ổn định trong quá trình ingestion.
+
+Không được xem id_sequence là số dòng CSV gốc.
+```
+
+Nhấn **Ctrl + S**.
+
+## Bước 13.2. Tại sao cần ghi rõ giới hạn?
+
+T giải thích ngắn gọn:
+
+Giả sử trong CSV có hai dòng hoàn toàn giống nhau:
+
+```text
+ID: 123 | Text: Hello | Label: positive
+ID: 123 | Text: Hello | Label: positive
+```
+
+Spark có thể tạo:
+
+```text
+s140_train_123_1
+s140_train_123_2
+```
+
+Cả hai ID đều duy nhất. Nhưng vì hai dòng giống hệt nhau, Spark không có thông tin để biết dòng nào là dòng thứ nhất trong CSV gốc.
+
+Vì vậy, ta cần phân biệt:
+
+| Tiêu chí | Hiện trạng |
+|---|---|
+| ID duy nhất trong Parquet | Đã kiểm định PASS |
+| Không làm mất bản ghi | Đã kiểm định đủ 1,6 triệu |
+| Truy vết chính xác số dòng CSV gốc | Chưa hỗ trợ |
+| Bảo đảm gán ID ổn định cho từng dòng vật lý | Chưa chứng minh |
+
+Điều này không làm mất giá trị của kết quả Batch hiện tại. Nó chỉ xác định đúng phạm vi mà phương pháp đã chứng minh được.
+
+---
+
+## Bước 13.3. Kiểm tra tài liệu và trạng thái Git
+
+Trong Terminal VS Code, chạy:
+
+```powershell
+Test-Path .\docs\w02_field_mapping.md
+Test-Path .\docs\reports\w03_batch_benchmark.md
+Test-Path .\docs\reports\w03_batch_read_benchmark.json
+```
+
+Mong đợi:
+
+```text
+True
+True
+True
+```
+
+Sau đó chạy:
+
+```powershell
+git status --short
+```
+
+Lệnh này giúp chúng ta xem những file đã thay đổi trước khi commit.
+
+## Tiến độ Tuần 3
+
+<box border radius="lg" padding={3} gap={2}>
+  <row align="center" gap={2}>
+    <icon name="check-circle" color="success"/>
+    Xử lý 1.600.000 tweet bằng PySpark
+  </row>
+  <row align="center" gap={2}>
+    <icon name="check-circle" color="success"/>
+    Chuẩn hóa dữ liệu và xuất Parquet
+  </row>
+  <row align="center" gap={2}>
+    <icon name="check-circle" color="success"/>
+    Kiểm định chất lượng Parquet: 7/7 PASS
+  </row>
+  <row align="center" gap={2}>
+    <icon name="check-circle" color="success"/>
+    Benchmark: Parquet nhanh hơn khoảng 3,33 lần trong phép thử
+  </row>
+  <row align="center" gap={2}>
+    <icon name="circle-dashed" color="secondary"/>
+    Đồng bộ tài liệu với code
+  </row>
+  <row align="center" gap={2}>
+    <icon name="circle" color="tertiary"/>
+    Commit và push Tuần 3 lên GitHub
+  </row>
+</box>
+
 
 ## 5. Quy tắc xử lý thời gian
 
