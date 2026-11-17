@@ -230,3 +230,6 @@ spark-warehouse/
 docker/elasticsearch/data/
 docker/kafka/data/
 docker/zookeeper/data/
+# Raw and processed datasets
+/data/raw/
+/data/processed/

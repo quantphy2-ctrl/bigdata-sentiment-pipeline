@@ -1,0 +1,39 @@
+{
+  "train": {
+    "dataset": "train",
+    "file": "training.1600000.processed.noemoticon.csv",
+    "file_size_mb": 227.74,
+    "total_records": 1600000,
+    "malformed_rows": 0,
+    "label_distribution": {
+      "negative": 800000,
+      "positive": 800000
+    },
+    "empty_text_records": 0,
+    "empty_id_records": 0,
+    "invalid_label_records": 0,
+    "duplicate_id_extra_rows": 1685,
+    "duplicate_text_extra_rows": 19112,
+    "invalid_timestamp_records": 0,
+    "replacement_character_count": 0
+  },
+  "test": {
+    "dataset": "test",
+    "file": "testdata.manual.2009.06.14.csv",
+    "file_size_mb": 0.07,
+    "total_records": 498,
+    "malformed_rows": 0,
+    "label_distribution": {
+      "negative": 177,
+      "neutral": 139,
+      "positive": 182
+    },
+    "empty_text_records": 0,
+    "empty_id_records": 0,
+    "invalid_label_records": 0,
+    "duplicate_id_extra_rows": 0,
+    "duplicate_text_extra_rows": 0,
+    "invalid_timestamp_records": 0,
+    "replacement_character_count": 0
+  }
+}
