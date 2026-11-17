@@ -1,4 +1,4 @@
-﻿python.exe : Ivy Default Cache set to: C:\Users\<user>\.ivy2\cache
+python.exe : Ivy Default Cache set to: C:\Users\<user>\.ivy2\cache
 At C:\Users\<user>\run_spark.
 ps1:6 char:1
 + & .\.venv\Scripts\python.exe .\processing\spark_streaming_v2.py 1> do ...
