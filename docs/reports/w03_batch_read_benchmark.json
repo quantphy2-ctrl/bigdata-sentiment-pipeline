@@ -1,0 +1,58 @@
+{
+  "dataset": "Sentiment140 Training",
+  "records": 1600000,
+  "benchmark_type": "read_and_text_length_scan",
+  "spark_mode": "local[2]",
+  "warmup_excluded": true,
+  "measured_runs": 3,
+  "results": {
+    "csv": [
+      {
+        "seconds": 2.016,
+        "rows": 1600000,
+        "text_chars": 118544160,
+        "rows_per_second": 793513.19
+      },
+      {
+        "seconds": 2.049,
+        "rows": 1600000,
+        "text_chars": 118544160,
+        "rows_per_second": 780884.04
+      },
+      {
+        "seconds": 2.178,
+        "rows": 1600000,
+        "text_chars": 118544160,
+        "rows_per_second": 734603.97
+      }
+    ],
+    "parquet": [
+      {
+        "seconds": 0.651,
+        "rows": 1600000,
+        "text_chars": 118544160,
+        "rows_per_second": 2456910.78
+      },
+      {
+        "seconds": 0.615,
+        "rows": 1600000,
+        "text_chars": 118544160,
+        "rows_per_second": 2603312.45
+      },
+      {
+        "seconds": 0.59,
+        "rows": 1600000,
+        "text_chars": 118544160,
+        "rows_per_second": 2711693.43
+      }
+    ]
+  },
+  "median_seconds": {
+    "csv": 2.049,
+    "parquet": 0.615
+  },
+  "median_based_rows_per_second": {
+    "csv": 780868.72,
+    "parquet": 2601626.02
+  }
+}

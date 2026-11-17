@@ -1,0 +1,34 @@
+{
+  "dataset": "Twitter US Airline Sentiment",
+  "total_records": 14640,
+  "total_columns": 15,
+  "columns": [
+    "tweet_id",
+    "airline_sentiment",
+    "airline_sentiment_confidence",
+    "negativereason",
+    "negativereason_confidence",
+    "airline",
+    "airline_sentiment_gold",
+    "name",
+    "negativereason_gold",
+    "retweet_count",
+    "text",
+    "tweet_coord",
+    "tweet_created",
+    "tweet_location",
+    "user_timezone"
+  ],
+  "label_distribution": {
+    "neutral": 3099,
+    "positive": 2363,
+    "negative": 9178
+  },
+  "empty_text_records": 0,
+  "empty_id_records": 0,
+  "invalid_label_records": 0,
+  "duplicate_id_rows": 155,
+  "duplicate_text_rows": 213,
+  "invalid_timestamp_records": 0,
+  "replacement_character_count": 0
+}
