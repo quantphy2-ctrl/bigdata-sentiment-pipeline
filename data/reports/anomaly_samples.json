@@ -1,0 +1,91 @@
+{
+  "total_records_scanned": {
+    "Twitter US Airline Sentiment": 14640,
+    "Sentiment140 Training": 1600000,
+    "Sentiment140 Test": 498
+  },
+  "sample_count": 15,
+  "samples": [
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "Mention (@username)",
+      "text": "@USER What @USER said."
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "Mention (@username)",
+      "text": "@USER plus you've added commercials to the experience... tacky."
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "Hashtag (#topic)",
+      "text": "@USER @USER I'm flying your #fabulous #Seductive skies again! U take all the #stress away from travel [URL]"
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "Hashtag (#topic)",
+      "text": "@USER So excited for my first cross country flight LAX to MCO I've heard nothing but great things about Virgin America. #29DaysToGo"
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "URL",
+      "text": "@USER Really missed a prime opportunity for Men Without Hats parody, there. [URL]"
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "HTML Entity",
+      "text": "@USER it's really aggressive to blast obnoxious \"entertainment\" in your guests' faces &amp; they have little recourse"
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "HTML Entity",
+      "text": "@USER I &lt;3 pretty graphics. so much better than minimal iconography. :D"
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "Từ phủ định",
+      "text": "@USER I didn't today... Must mean I need to take another trip!"
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "Từ phủ định",
+      "text": "@USER seriously would pay $30 a flight for seats that didn't have this playing. it's really the only bad thing about flying VA"
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "Từ viết tắt",
+      "text": "@USER What happened 2 ur vegan food options?! At least say on ur site so i know I won't be able 2 eat anything for next 6 hrs #fail"
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "Từ viết tắt",
+      "text": "@USER hi! i'm so excited about your $99 LGA-&gt;DAL deal- but i've been trying 2 book since last week &amp; the page never loads. thx!"
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "Ký tự thay thế encoding",
+      "text": "@USER yes, nearly every time I fly VX this â€œear wormâ€� wonâ€™t go away :)"
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "Ký tự thay thế encoding",
+      "text": "I â�¤ï¸� flying @USER. â˜ºï¸�ðŸ‘�"
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "Ký tự Unicode/emoji",
+      "text": "@USER Well, I didn'tâ€¦but NOW I DO! :-D"
+    },
+    {
+      "dataset": "Twitter US Airline Sentiment",
+      "category": "Có xuống dòng",
+      "text": "@USER your mobile site is broken, shows  \"{{header.elevateUser.numOfPointsAvailable || '0' | number}} Points\", won't let me checkin"
+    }
+  ],
+  "notes": [
+    "Đây là các mẫu được chọn tự động để kiểm tra thủ công.",
+    "Tên tài khoản và URL đã được ẩn trong nội dung mẫu.",
+    "Ký tự Unicode không đồng nghĩa chắc chắn với emoji hoặc lỗi encoding.",
+    "Cần kiểm tra thủ công trước khi quyết định tiền xử lý."
+  ]
+}

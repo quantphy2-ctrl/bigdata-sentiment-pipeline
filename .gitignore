@@ -230,3 +230,23 @@ spark-warehouse/
 docker/elasticsearch/data/
 docker/kafka/data/
 docker/zookeeper/data/
+# Local Python environments
+.venv/
+.venv311/
+venv/
+
+# Local datasets and generated Spark outputs
+data/raw/
+data/processed/
+checkpoints/
+spark-warehouse/
+metastore_db/
+
+# Spark and Java temporary logs
+hs_err_pid*.log
+*.log
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.class

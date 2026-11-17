@@ -1,0 +1,433 @@
+[
+  {
+    "dataset": "Twitter US Airline Sentiment",
+    "file": "data\\raw\\Tweets.csv",
+    "exists": true,
+    "size_bytes": 3421431,
+    "size_mb": 3.263,
+    "columns": [
+      "tweet_id",
+      "airline_sentiment",
+      "airline_sentiment_confidence",
+      "negativereason",
+      "negativereason_confidence",
+      "airline",
+      "airline_sentiment_gold",
+      "name",
+      "negativereason_gold",
+      "retweet_count",
+      "text",
+      "tweet_coord",
+      "tweet_created",
+      "tweet_location",
+      "user_timezone"
+    ],
+    "decode_replacement_chars": 630,
+    "records_read": 14640,
+    "malformed_rows": 0,
+    "empty_text": 0,
+    "missing_label": 0,
+    "invalid_label": 0,
+    "missing_timestamp": 0,
+    "unparseable_timestamp": 0,
+    "duplicate_id_rows": 155,
+    "duplicate_text_rows": 213,
+    "valid_label_denominator": 14640,
+    "labels": {
+      "neutral": {
+        "count": 3099,
+        "percentage_of_valid_labels": 21.17
+      },
+      "positive": {
+        "count": 2363,
+        "percentage_of_valid_labels": 16.14
+      },
+      "negative": {
+        "count": 9178,
+        "percentage_of_valid_labels": 62.69
+      }
+    },
+    "sample_quality_examples": [
+      {
+        "id": "570306133677760513",
+        "label": "neutral",
+        "text": "@VirginAmerica What @dhepburn said."
+      },
+      {
+        "id": "570301130888122368",
+        "label": "positive",
+        "text": "@VirginAmerica plus you've added commercials to the experience... tacky."
+      },
+      {
+        "id": "570301083672813571",
+        "label": "neutral",
+        "text": "@VirginAmerica I didn't today... Must mean I need to take another trip!"
+      },
+      {
+        "id": "570301031407624196",
+        "label": "negative",
+        "text": "@VirginAmerica it's really aggressive to blast obnoxious \"entertainment\" in your guests' faces &amp; they have little recourse"
+      },
+      {
+        "id": "570300817074462722",
+        "label": "negative",
+        "text": "@VirginAmerica and it's a really big bad thing about it"
+      },
+      {
+        "id": "570300767074181121",
+        "label": "negative",
+        "text": "@VirginAmerica seriously would pay $30 a flight for seats that didn't have this playing.\nit's really the only bad thing about flying VA"
+      },
+      {
+        "id": "570300616901320704",
+        "label": "positive",
+        "text": "@VirginAmerica yes, nearly every time I fly VX this â€œear wormâ€� wonâ€™t go away :)"
+      },
+      {
+        "id": "570300248553349120",
+        "label": "neutral",
+        "text": "@VirginAmerica Really missed a prime opportunity for Men Without Hats parody, there. https://t.co/mWpG7grEZP"
+      },
+      {
+        "id": "570299953286942721",
+        "label": "positive",
+        "text": "@virginamerica Well, I didn'tâ€¦but NOW I DO! :-D"
+      },
+      {
+        "id": "570295459631263746",
+        "label": "positive",
+        "text": "@VirginAmerica it was amazing, and arrived an hour early. You're too good to me."
+      },
+      {
+        "id": "570294189143031808",
+        "label": "neutral",
+        "text": "@VirginAmerica did you know that suicide is the second leading cause of death among teens 10-24"
+      },
+      {
+        "id": "570289724453216256",
+        "label": "positive",
+        "text": "@VirginAmerica I &lt;3 pretty graphics. so much better than minimal iconography. :D"
+      },
+      {
+        "id": "570289584061480960",
+        "label": "positive",
+        "text": "@VirginAmerica This is such a great deal! Already thinking about my 2nd trip to @Australia &amp; I haven't even gone on my 1st trip yet! ;p"
+      },
+      {
+        "id": "570287408438120448",
+        "label": "positive",
+        "text": "@VirginAmerica @virginmedia I'm flying your #fabulous #Seductive skies again! U take all the #stress away from travel http://t.co/ahlXHhKiyn"
+      },
+      {
+        "id": "570285904809598977",
+        "label": "positive",
+        "text": "@VirginAmerica Thanks!"
+      },
+      {
+        "id": "570282469121007616",
+        "label": "negative",
+        "text": "@VirginAmerica SFO-PDX schedule is still MIA."
+      },
+      {
+        "id": "570277724385734656",
+        "label": "positive",
+        "text": "@VirginAmerica So excited for my first cross country flight LAX to MCO I've heard nothing but great things about Virgin America. #29DaysToGo"
+      },
+      {
+        "id": "570276917301137409",
+        "label": "negative",
+        "text": "@VirginAmerica  I flew from NYC to SFO last week and couldn't fully sit in my seat due to two large gentleman on either side of me. HELP!"
+      },
+      {
+        "id": "570270684619923457",
+        "label": "positive",
+        "text": "I â�¤ï¸� flying @VirginAmerica. â˜ºï¸�ðŸ‘�"
+      },
+      {
+        "id": "570267956648792064",
+        "label": "positive",
+        "text": "@VirginAmerica you know what would be amazingly awesome? BOS-FLL PLEASE!!!!!!! I want to fly with only you."
+      }
+    ]
+  },
+  {
+    "dataset": "Sentiment140 Training",
+    "file": "data\\raw\\sentiment140\\training.1600000.processed.noemoticon.csv",
+    "exists": true,
+    "size_bytes": 238803811,
+    "size_mb": 227.741,
+    "columns": [
+      "target",
+      "ids",
+      "date",
+      "flag",
+      "user",
+      "text"
+    ],
+    "decode_replacement_chars": 0,
+    "records_read": 1600000,
+    "malformed_rows": 0,
+    "empty_text": 0,
+    "missing_label": 0,
+    "invalid_label": 0,
+    "missing_timestamp": 0,
+    "unparseable_timestamp": 0,
+    "duplicate_id_rows": 1685,
+    "duplicate_text_rows": 18534,
+    "valid_label_denominator": 1600000,
+    "labels": {
+      "0": {
+        "count": 800000,
+        "percentage_of_valid_labels": 50.0
+      },
+      "4": {
+        "count": 800000,
+        "percentage_of_valid_labels": 50.0
+      }
+    },
+    "sample_quality_examples": [
+      {
+        "id": "1467810369",
+        "label": "0",
+        "text": "@switchfoot http://twitpic.com/2y1zl - Awww, that's a bummer.  You shoulda got David Carr of Third Day to do it. ;D"
+      },
+      {
+        "id": "1467810917",
+        "label": "0",
+        "text": "@Kenichan I dived many times for the ball. Managed to save 50%  The rest go out of bounds"
+      },
+      {
+        "id": "1467811193",
+        "label": "0",
+        "text": "@nationwideclass no, it's not behaving at all. i'm mad. why am i here? because I can't see you all over there. "
+      },
+      {
+        "id": "1467811372",
+        "label": "0",
+        "text": "@Kwesidei not the whole crew "
+      },
+      {
+        "id": "1467811594",
+        "label": "0",
+        "text": "@LOLTrish hey  long time no see! Yes.. Rains a bit ,only a bit  LOL , I'm fine thanks , how's you ?"
+      },
+      {
+        "id": "1467811795",
+        "label": "0",
+        "text": "@Tatiana_K nope they didn't have it "
+      },
+      {
+        "id": "1467812025",
+        "label": "0",
+        "text": "@twittera que me muera ? "
+      },
+      {
+        "id": "1467812723",
+        "label": "0",
+        "text": "@caregiving I couldn't bear to watch it.  And I thought the UA loss was embarrassing . . . . ."
+      },
+      {
+        "id": "1467812771",
+        "label": "0",
+        "text": "@octolinz16 It it counts, idk why I did either. you never talk to me anymore "
+      },
+      {
+        "id": "1467812784",
+        "label": "0",
+        "text": "@smarrison i would've been the first, but i didn't have a gun.    not really though, zac snyder's just a doucheclown."
+      },
+      {
+        "id": "1467812799",
+        "label": "0",
+        "text": "@iamjazzyfizzle I wish I got to watch it with you!! I miss you and @iamlilnicki  how was the premiere?!"
+      },
+      {
+        "id": "1467813579",
+        "label": "0",
+        "text": "@LettyA ahh ive always wanted to see rent  love the soundtrack!!"
+      },
+      {
+        "id": "1467813782",
+        "label": "0",
+        "text": "@FakerPattyPattz Oh dear. Were you drinking out of the forgotten table drinks? "
+      },
+      {
+        "id": "1467813985",
+        "label": "0",
+        "text": "@alydesigns i was out most of the day so didn't get much done "
+      },
+      {
+        "id": "1467814119",
+        "label": "0",
+        "text": "@angry_barista I baked you a cake but I ated it "
+      },
+      {
+        "id": "1467815924",
+        "label": "0",
+        "text": "@alielayus I want to go to promote GEAR AND GROOVE but unfornately no ride there  I may b going to the one in Anaheim in May though"
+      },
+      {
+        "id": "1467816149",
+        "label": "0",
+        "text": "@julieebaby awe i love you too!!!! 1 am here  i miss you"
+      },
+      {
+        "id": "1467816665",
+        "label": "0",
+        "text": "@HumpNinja I cry my asian eyes to sleep at night "
+      },
+      {
+        "id": "1467817225",
+        "label": "0",
+        "text": "@cocomix04 ill tell ya the story later  not a good day and ill be workin for like three more hours..."
+      },
+      {
+        "id": "1467817374",
+        "label": "0",
+        "text": "@MissXu sorry! bed time came here (GMT+1)   http://is.gd/fNge"
+      }
+    ]
+  },
+  {
+    "dataset": "Sentiment140 Test",
+    "file": "data\\raw\\sentiment140\\testdata.manual.2009.06.14.csv",
+    "exists": true,
+    "size_bytes": 74326,
+    "size_mb": 0.071,
+    "columns": [
+      "target",
+      "ids",
+      "date",
+      "flag",
+      "user",
+      "text"
+    ],
+    "decode_replacement_chars": 0,
+    "records_read": 498,
+    "malformed_rows": 0,
+    "empty_text": 0,
+    "missing_label": 0,
+    "invalid_label": 0,
+    "missing_timestamp": 0,
+    "unparseable_timestamp": 0,
+    "duplicate_id_rows": 0,
+    "duplicate_text_rows": 0,
+    "valid_label_denominator": 498,
+    "labels": {
+      "4": {
+        "count": 182,
+        "percentage_of_valid_labels": 36.55
+      },
+      "0": {
+        "count": 177,
+        "percentage_of_valid_labels": 35.54
+      },
+      "2": {
+        "count": 139,
+        "percentage_of_valid_labels": 27.91
+      }
+    },
+    "sample_quality_examples": [
+      {
+        "id": "3",
+        "label": "4",
+        "text": "@stellargirl I loooooooovvvvvveee my Kindle2. Not that the DX is cool, but the 2 is fantastic in its own right."
+      },
+      {
+        "id": "5",
+        "label": "4",
+        "text": "Ok, first assesment of the #kindle2 ...it fucking rocks!!!"
+      },
+      {
+        "id": "6",
+        "label": "4",
+        "text": "@kenburbary You'll love your Kindle2. I've had mine for a few months and never looked back. The new big one is huge! No need for remorse! :)"
+      },
+      {
+        "id": "7",
+        "label": "4",
+        "text": "@mikefish  Fair enough. But i have the Kindle2 and I think it's perfect  :)"
+      },
+      {
+        "id": "8",
+        "label": "4",
+        "text": "@richardebaker no. it is too big. I'm quite happy with the Kindle2."
+      },
+      {
+        "id": "13",
+        "label": "2",
+        "text": "Check this video out -- President Obama at the White House Correspondents' Dinner http://bit.ly/IMXUM"
+      },
+      {
+        "id": "14",
+        "label": "0",
+        "text": "@Karoli I firmly believe that Obama/Pelosi have ZERO desire to be civil.  It's a charade and a slogan, but they want to destroy conservatism"
+      },
+      {
+        "id": "15",
+        "label": "4",
+        "text": "House Correspondents dinner was last night whoopi, barbara &amp; sherri went, Obama got a standing ovation"
+      },
+      {
+        "id": "17",
+        "label": "0",
+        "text": "dear nike, stop with the flywire. that shit is a waste of science. and ugly. love, @vincentx24x"
+      },
+      {
+        "id": "18",
+        "label": "4",
+        "text": "#lebron best athlete of our generation, if not all time (basketball related) I don't want to get into inter-sport debates about   __1/2"
+      },
+      {
+        "id": "20",
+        "label": "4",
+        "text": "i love lebron. http://bit.ly/PdHur"
+      },
+      {
+        "id": "21",
+        "label": "0",
+        "text": "@ludajuice Lebron is a Beast, but I'm still cheering 4 the A..til the end."
+      },
+      {
+        "id": "22",
+        "label": "4",
+        "text": "@Pmillzz lebron IS THE BOSS"
+      },
+      {
+        "id": "23",
+        "label": "4",
+        "text": "@sketchbug Lebron is a hometown hero to me, lol I love the Lakers but let's go Cavs, lol"
+      },
+      {
+        "id": "25",
+        "label": "4",
+        "text": "@wordwhizkid Lebron is a beast... nobody in the NBA comes even close."
+      },
+      {
+        "id": "34",
+        "label": "4",
+        "text": "http://twurl.nl/epkr4b - awesome come back from @biz (via @fredwilson)"
+      },
+      {
+        "id": "35",
+        "label": "4",
+        "text": "In montreal for a long weekend of R&amp;R. Much needed."
+      },
+      {
+        "id": "46",
+        "label": "4",
+        "text": "Booz Allen Hamilton has a bad ass homegrown social collaboration platform. Way cool!  #ttiv"
+      },
+      {
+        "id": "47",
+        "label": "4",
+        "text": "[#MLUC09] Customer Innovation Award Winner: Booz Allen Hamilton -- http://ping.fm/c2hPP"
+      },
+      {
+        "id": "49",
+        "label": "4",
+        "text": "@SoChi2 I current use the Nikon D90 and love it, but not as much as the Canon 40D/50D. I chose the D90 for the  video feature. My mistake."
+      }
+    ]
+  }
+]
