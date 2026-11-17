@@ -233,3 +233,5 @@ docker/zookeeper/data/
 # Raw and processed datasets
 /data/raw/
 /data/processed/
+# Generated Machine Learning models
+/models/*.joblib

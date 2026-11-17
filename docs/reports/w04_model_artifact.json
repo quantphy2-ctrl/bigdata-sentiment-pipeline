@@ -1,0 +1,23 @@
+{
+  "model_name": "airline_sentiment_v1",
+  "model_type": "TF-IDF + Logistic Regression",
+  "model_file": "models/airline_sentiment_v1.joblib",
+  "trained_at_utc": "2026-11-17T15:27:09.411413+00:00",
+  "training_records": 12241,
+  "training_sources": [
+    "train.csv",
+    "validation.csv"
+  ],
+  "test_used": false,
+  "C": 2.0,
+  "class_weight": "balanced",
+  "random_state": 42,
+  "tfidf_features": 26303,
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "sklearn_version": "1.9.1",
+  "model_sha256": "12883d48f053b93fba7e037104d6c0d4d5055fefead8c02c1aee3fb6a93b8a3d"
+}

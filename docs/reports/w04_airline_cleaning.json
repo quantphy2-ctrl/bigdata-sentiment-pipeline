@@ -1,0 +1,19 @@
+{
+  "original_rows": 14640,
+  "invalid_rows": 0,
+  "conflicting_text_groups": 25,
+  "removed_conflicting_rows": 57,
+  "removed_same_label_duplicate_rows": 181,
+  "clean_rows": 14402,
+  "original_label_distribution": {
+    "neutral": 3099,
+    "positive": 2363,
+    "negative": 9178
+  },
+  "clean_label_distribution": {
+    "neutral": 3046,
+    "positive": 2277,
+    "negative": 9079
+  },
+  "cleaning_rule": "Group by stripped exact text; drop conflicting-label groups; retain first record for same-label groups."
+}

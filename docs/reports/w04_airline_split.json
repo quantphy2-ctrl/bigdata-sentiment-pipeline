@@ -1,0 +1,35 @@
+{
+  "dataset": "Twitter US Airline Sentiment",
+  "clean_records": 14402,
+  "random_state": 42,
+  "split_method": "stratified",
+  "splits": {
+    "train": {
+      "records": 10081,
+      "percentage": 70.0,
+      "label_distribution": {
+        "negative": 6355,
+        "neutral": 2132,
+        "positive": 1594
+      }
+    },
+    "validation": {
+      "records": 2160,
+      "percentage": 15.0,
+      "label_distribution": {
+        "positive": 341,
+        "negative": 1362,
+        "neutral": 457
+      }
+    },
+    "test": {
+      "records": 2161,
+      "percentage": 15.0,
+      "label_distribution": {
+        "negative": 1362,
+        "neutral": 457,
+        "positive": 342
+      }
+    }
+  }
+}

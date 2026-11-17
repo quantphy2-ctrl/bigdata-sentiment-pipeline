@@ -1,0 +1,255 @@
+{
+  "dataset": "Twitter US Airline Sentiment",
+  "selection_metric": "validation_macro_f1",
+  "train_records": 10081,
+  "validation_records": 2160,
+  "test_used": false,
+  "tfidf": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 30000,
+    "sublinear_tf": true
+  },
+  "models": [
+    {
+      "name": "baseline",
+      "C": 1.0,
+      "class_weight": "balanced",
+      "training_seconds": 1.194,
+      "accuracy": 0.797222,
+      "macro_f1": 0.752165,
+      "classification_report": {
+        "negative": {
+          "precision": 0.8821292775665399,
+          "recall": 0.8516886930983847,
+          "f1-score": 0.866641763167725,
+          "support": 1362.0
+        },
+        "neutral": {
+          "precision": 0.6007827788649707,
+          "recall": 0.6717724288840262,
+          "f1-score": 0.6342975206611571,
+          "support": 457.0
+        },
+        "positive": {
+          "precision": 0.7634730538922155,
+          "recall": 0.7478005865102639,
+          "f1-score": 0.7555555555555555,
+          "support": 341.0
+        },
+        "accuracy": 0.7972222222222223,
+        "macro avg": {
+          "precision": 0.7487950367745754,
+          "recall": 0.757087236164225,
+          "f1-score": 0.7521649464614791,
+          "support": 2160.0
+        },
+        "weighted avg": {
+          "precision": 0.8038713506315577,
+          "recall": 0.7972222222222223,
+          "f1-score": 0.7999465244541827,
+          "support": 2160.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          1160,
+          162,
+          40
+        ],
+        [
+          111,
+          307,
+          39
+        ],
+        [
+          44,
+          42,
+          255
+        ]
+      ]
+    },
+    {
+      "name": "balanced_C_0.5",
+      "C": 0.5,
+      "class_weight": "balanced",
+      "training_seconds": 1.201,
+      "accuracy": 0.793981,
+      "macro_f1": 0.749643,
+      "classification_report": {
+        "negative": {
+          "precision": 0.8864864864864865,
+          "recall": 0.8428781204111601,
+          "f1-score": 0.8641324802408732,
+          "support": 1362.0
+        },
+        "neutral": {
+          "precision": 0.5928030303030303,
+          "recall": 0.6849015317286652,
+          "f1-score": 0.6355329949238578,
+          "support": 457.0
+        },
+        "positive": {
+          "precision": 0.7537091988130564,
+          "recall": 0.7448680351906158,
+          "f1-score": 0.7492625368731564,
+          "support": 341.0
+        },
+        "accuracy": 0.7939814814814815,
+        "macro avg": {
+          "precision": 0.7443329052008577,
+          "recall": 0.757549229110147,
+          "f1-score": 0.7496426706792958,
+          "support": 2160.0
+        },
+        "weighted avg": {
+          "precision": 0.8033890815918202,
+          "recall": 0.7939814814814815,
+          "f1-score": 0.7976321952972307,
+          "support": 2160.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          1148,
+          168,
+          46
+        ],
+        [
+          107,
+          313,
+          37
+        ],
+        [
+          40,
+          47,
+          254
+        ]
+      ]
+    },
+    {
+      "name": "balanced_C_2",
+      "C": 2.0,
+      "class_weight": "balanced",
+      "training_seconds": 1.227,
+      "accuracy": 0.801852,
+      "macro_f1": 0.752733,
+      "classification_report": {
+        "negative": {
+          "precision": 0.8762962962962964,
+          "recall": 0.868575624082232,
+          "f1-score": 0.8724188790560472,
+          "support": 1362.0
+        },
+        "neutral": {
+          "precision": 0.6176470588235294,
+          "recall": 0.6433260393873085,
+          "f1-score": 0.6302250803858521,
+          "support": 457.0
+        },
+        "positive": {
+          "precision": 0.7634730538922155,
+          "recall": 0.7478005865102639,
+          "f1-score": 0.7555555555555555,
+          "support": 341.0
+        },
+        "accuracy": 0.8018518518518518,
+        "macro avg": {
+          "precision": 0.7524721363373471,
+          "recall": 0.7532340833266016,
+          "f1-score": 0.7527331716658182,
+          "support": 2160.0
+        },
+        "weighted avg": {
+          "precision": 0.8037613763033121,
+          "recall": 0.8018518518518518,
+          "f1-score": 0.8027276941921828,
+          "support": 2160.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          1183,
+          143,
+          36
+        ],
+        [
+          120,
+          294,
+          43
+        ],
+        [
+          47,
+          39,
+          255
+        ]
+      ]
+    },
+    {
+      "name": "unweighted_C_1",
+      "C": 1.0,
+      "class_weight": null,
+      "training_seconds": 1.36,
+      "accuracy": 0.796296,
+      "macro_f1": 0.713486,
+      "classification_report": {
+        "negative": {
+          "precision": 0.7963525835866262,
+          "recall": 0.9618208516886931,
+          "f1-score": 0.8713002993016296,
+          "support": 1362.0
+        },
+        "neutral": {
+          "precision": 0.7247386759581882,
+          "recall": 0.4551422319474836,
+          "f1-score": 0.5591397849462365,
+          "support": 457.0
+        },
+        "positive": {
+          "precision": 0.8859649122807017,
+          "recall": 0.592375366568915,
+          "f1-score": 0.7100175746924429,
+          "support": 341.0
+        },
+        "accuracy": 0.7962962962962963,
+        "macro avg": {
+          "precision": 0.802352057275172,
+          "recall": 0.6697794834016971,
+          "f1-score": 0.7134858863134363,
+          "support": 2160.0
+        },
+        "weighted avg": {
+          "precision": 0.7953480689099982,
+          "recall": 0.7962962962962963,
+          "f1-score": 0.7797934640460058,
+          "support": 2160.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          1310,
+          44,
+          8
+        ],
+        [
+          231,
+          208,
+          18
+        ],
+        [
+          104,
+          35,
+          202
+        ]
+      ]
+    }
+  ],
+  "best_model_name": "balanced_C_2",
+  "best_model_config": {
+    "C": 2.0,
+    "class_weight": "balanced"
+  }
+}

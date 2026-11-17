@@ -1,0 +1,75 @@
+{
+  "dataset": "Twitter US Airline Sentiment",
+  "model": "TF-IDF + Logistic Regression",
+  "model_config": {
+    "C": 2.0,
+    "class_weight": "balanced",
+    "max_iter": 1000,
+    "random_state": 42
+  },
+  "selected_using": "validation_macro_f1",
+  "refit_on": "train_plus_validation",
+  "train_records": 10081,
+  "validation_records": 2160,
+  "final_training_records": 12241,
+  "test_records": 2161,
+  "tfidf_features": 26303,
+  "training_seconds": 1.375,
+  "test_accuracy": 0.7926885701064322,
+  "test_macro_f1": 0.7457856793988092,
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "confusion_matrix": [
+    [
+      1150,
+      154,
+      58
+    ],
+    [
+      112,
+      297,
+      48
+    ],
+    [
+      39,
+      37,
+      266
+    ]
+  ],
+  "classification_report": {
+    "negative": {
+      "precision": 0.883935434281322,
+      "recall": 0.8443465491923642,
+      "f1-score": 0.8636875704093128,
+      "support": 1362.0
+    },
+    "neutral": {
+      "precision": 0.6086065573770492,
+      "recall": 0.649890590809628,
+      "f1-score": 0.6285714285714286,
+      "support": 457.0
+    },
+    "positive": {
+      "precision": 0.7150537634408602,
+      "recall": 0.7777777777777778,
+      "f1-score": 0.7450980392156863,
+      "support": 342.0
+    },
+    "accuracy": 0.7926885701064322,
+    "macro avg": {
+      "precision": 0.7358652516997438,
+      "recall": 0.75733830592659,
+      "f1-score": 0.7457856793988092,
+      "support": 2161.0
+    },
+    "weighted avg": {
+      "precision": 0.7989827141643897,
+      "recall": 0.7926885701064322,
+      "f1-score": 0.7951981227054101,
+      "support": 2161.0
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "model": "TF-IDF + Logistic Regression",
+  "model_stage": "baseline",
+  "training_records": 10081,
+  "validation_records": 2160,
+  "test_used": false,
+  "tfidf": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 30000,
+    "sublinear_tf": true,
+    "actual_features": 22255
+  },
+  "classifier": {
+    "type": "LogisticRegression",
+    "max_iter": 1000,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "training_seconds": 1.36,
+  "validation_accuracy": 0.7972222222222223,
+  "validation_macro_f1": 0.7521649464614791,
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "confusion_matrix": [
+    [
+      1160,
+      162,
+      40
+    ],
+    [
+      111,
+      307,
+      39
+    ],
+    [
+      44,
+      42,
+      255
+    ]
+  ],
+  "classification_report": {
+    "negative": {
+      "precision": 0.8821292775665399,
+      "recall": 0.8516886930983847,
+      "f1-score": 0.866641763167725,
+      "support": 1362.0
+    },
+    "neutral": {
+      "precision": 0.6007827788649707,
+      "recall": 0.6717724288840262,
+      "f1-score": 0.6342975206611571,
+      "support": 457.0
+    },
+    "positive": {
+      "precision": 0.7634730538922155,
+      "recall": 0.7478005865102639,
+      "f1-score": 0.7555555555555555,
+      "support": 341.0
+    },
+    "accuracy": 0.7972222222222223,
+    "macro avg": {
+      "precision": 0.7487950367745754,
+      "recall": 0.757087236164225,
+      "f1-score": 0.7521649464614791,
+      "support": 2160.0
+    },
+    "weighted avg": {
+      "precision": 0.8038713506315577,
+      "recall": 0.7972222222222223,
+      "f1-score": 0.7999465244541827,
+      "support": 2160.0
+    }
+  }
+}
