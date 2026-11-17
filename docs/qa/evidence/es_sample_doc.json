@@ -1,0 +1,27 @@
+﻿{
+    "_index":  "social_events_v1",
+    "_type":  "_doc",
+    "_id":  "demo_3c001093624d45e3b4d487b62ef0509d",
+    "_score":  null,
+    "_source":  {
+                    "event_id":  "demo_3c001093624d45e3b4d487b62ef0509d",
+                    "platform":  "simulated_reddit",
+                    "content_type":  "comment",
+                    "text":  "The announcement is available online.",
+                    "language":  "en",
+                    "created_at":  "2026-11-17T09:28:01Z",
+                    "collected_at":  "2026-11-17T09:28:01Z",
+                    "engagement":  {
+                                       "likes":  null,
+                                       "replies":  null,
+                                       "shares":  null
+                                   },
+                    "kafka_topic":  "social_events_v1",
+                    "kafka_partition":  0,
+                    "kafka_offset":  1,
+                    "processed_at":  "2026-11-17T09:28:05Z"
+                },
+    "sort":  [
+                 1794907685000
+             ]
+}
