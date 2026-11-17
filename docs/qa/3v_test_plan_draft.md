@@ -17,7 +17,7 @@
 |---|---|---|---|
 | CPU | i5-12500H, 12C/16T | ? | |
 | RAM | 15,6 GB (Docker VM ~7,6 GB) | ? | |
-| Ổ đĩa | ? (SSD – D bổ sung) | ? | |
+| Ổ đĩa | NVMe SSD 1 TB (WD SN560), C: còn trống ~365 GB | ? | |
 | OS | Windows 11 Home | ? | |
 | Docker / Compose | 29.9.3 / v5.7.0 | ? | |
 | Spark | PySpark 3.5.1 `local[*]` (16 luồng logic) | ? | Số core thật dùng: `spark.sparkContext.defaultParallelism` |

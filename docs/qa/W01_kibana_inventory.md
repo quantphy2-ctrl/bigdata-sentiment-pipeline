@@ -57,7 +57,7 @@ Xuất từ Kibana **7.17.10** (khớp container). Kết quả import trên máy
 
 ## 5. Giới hạn của Dashboard hiện tại
 
-1. Dashboard v1 trỏ vào `sentiment_data` → trên máy mới **trống** cho tới khi chạy lại pipeline v1.
+1. Dashboard v1 trỏ vào `sentiment_data` → trên máy mới **trống** cho tới khi chạy lại pipeline v1 (ảnh: Count = 0, "Field platform.keyword was not found" – [`evidence/kibana_dashboard_v1.png`](evidence/kibana_dashboard_v1.png)).
 2. Lens "Comments by Platform" dùng `platform.keyword` (sinh ra từ dynamic mapping v1). Trên `social_events_v1`, `platform` đã là `keyword` và **không có** `.keyword` → **không thể tái sử dụng** visualization này bằng cách đổi data view; phải dựng lại.
 3. Không có biểu đồ nào về cảm xúc, thời gian, Batch/Stream – vì dữ liệu tương ứng chưa tồn tại.
 4. Data view `social_events_v1` chưa nằm trong file .ndjson của repo (mỗi máy phải tạo tay). Đề xuất: export lại sau W02 để vào repo.

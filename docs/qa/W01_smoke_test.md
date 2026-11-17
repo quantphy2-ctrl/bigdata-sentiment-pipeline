@@ -43,12 +43,12 @@ Bằng chứng nằm trong [`docs/qa/evidence/`](evidence/). Tên user Windows t
 | ST-18 | ST-17 | So sánh `_id` với `event_id` | `_id == event_id` | `True` cho 12/12 | PASS | `reconcile_result.txt` |
 | ST-19 | Spark bị dừng (kill tiến trình), checkpoint giữ nguyên | Chạy lại Spark, chờ ~20 s, rồi Producer lượt 4 | Không xử lý lại sự kiện cũ; sự kiện mới vào | Count giữ **9** khi idle; Spark tiếp tục từ `Batch 3`; count → **12** | PASS | `spark_v2_session2_restart_stdout.log`, `producer_run4_after_restart.log` |
 | ST-20 | Kibana green | Tạo data view `social_events_v1`, time field `created_at` (qua Saved Objects API) | Tạo được | Tạo thành công, id `social_events_v1` | PASS | `kibana_dataview_create.json` |
-| ST-21 | ST-20 | Discover: tìm `event_id : "demo_3c001093624d45e3b4d487b62ef0509d"`, time range Last 24h | Thấy 1 sự kiện | Truy vấn `term` tương đương trên ES trả 1 hit; **chưa chụp ảnh Discover** | PENDING (cần thao tác tay) | Xem §3 |
+| ST-21 | ST-20 | Discover: tìm `event_id : "demo_3c001093624d45e3b4d487b62ef0509d"`, time range Last 24h | Thấy 1 sự kiện | Discover (Last 24 hours) trả **1 hit**, `event_id` khớp; Kibana hiển thị `16:28:01` (UTC+7) = `09:28:01Z` trong ES | PASS | `kibana_discover.png` |
 | ST-22 | Kibana 7.17.10 | Import `kibana/group24-dashboard.ndjson` | Import 4 object | `successCount: 4` | PASS | `kibana_import_result.json` |
-| ST-23 | ST-22 | Mở dashboard "Big Data Sentiment Analysis - Group 24" | 2 biểu đồ hiển thị | Import được nhưng index `sentiment_data` **không tồn tại** (404) → biểu đồ không có dữ liệu | PASS (import) / NO DATA | Issue I-08 |
+| ST-23 | ST-22 | Mở dashboard "Big Data Sentiment Analysis - Group 24" | 2 biểu đồ hiển thị | Dashboard mở được: "Total Social Media Comments" = **0**; "Comments by Platform" báo **"Field platform.keyword was not found"** (index `sentiment_data` không tồn tại – 404) | PASS (import) / NO DATA | `kibana_dashboard_v1.png`, Issue I-08 |
 | ST-24 | Spark chạy nền | Dừng Spark | Dừng có kiểm soát | Dừng bằng kill tiến trình (chạy nền, không gửi được Ctrl+C); checkpoint vẫn dùng được (ST-19) | PASS (ghi chú) | – |
 
-**Tổng:** 19 PASS · 3 FAIL (đều là môi trường, đã có cách khắc phục) · 1 PENDING thao tác tay · 1 NO DATA (dự kiến).
+**Tổng:** 20 PASS · 3 FAIL (đều là môi trường, đã có cách khắc phục) · 1 NO DATA (dự kiến).
 
 ## 2. Số liệu độ trễ thăm dò (KHÔNG phải benchmark)
 
@@ -64,10 +64,10 @@ Bằng chứng nằm trong [`docs/qa/evidence/`](evidence/). Tên user Windows t
 Steady-state (lượt 2–3): n = 6, trung vị 3 s. Với n nhỏ và độ phân giải giây, **không** dùng để kết luận p95.
 Không chỉ số nào ở đây đo thời điểm document *có thể tìm thấy* trên ES (sau refresh).
 
-## 3. Việc còn thiếu – cần D làm tay trên trình duyệt
+## 3. Ảnh chụp Kibana (D chụp tay, 17/11/2026 ~17:07 UTC+7)
 
-- [ ] Ảnh Kibana Discover (`social_events_v1`, Last 24 hours) tìm thấy `demo_3c001093624d45e3b4d487b62ef0509d` → lưu `docs/qa/evidence/kibana_discover.png`, đổi ST-21 thành PASS.
-- [ ] Ảnh dashboard v1 sau import (trống dữ liệu) → `docs/qa/evidence/kibana_dashboard_v1.png`.
+- [x] Discover `social_events_v1` tìm thấy `demo_3c001093624d45e3b4d487b62ef0509d` → [`evidence/kibana_discover.png`](evidence/kibana_discover.png)
+- [x] Dashboard v1 sau import (không có dữ liệu, lỗi `platform.keyword`) → [`evidence/kibana_dashboard_v1.png`](evidence/kibana_dashboard_v1.png)
 - [ ] (Tuỳ chọn) Ảnh `docker compose ps` và terminal Producer/Spark nếu giảng viên yêu cầu ảnh thay vì file log.
 
 ## 4. Cách chạy lại trên máy D

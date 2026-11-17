@@ -7,7 +7,7 @@ Nhánh: `docs/w01-d-dashboard-qa` · Base: `main` @ `e3ba518` · Ngày: 17/11/20
 | Sản phẩm | File | Trạng thái |
 |---|---|---|
 | Kiểm kê ES/Kibana, .ndjson, hai index, giới hạn dashboard | [`docs/qa/W01_kibana_inventory.md`](W01_kibana_inventory.md) | Xong |
-| Smoke test trên máy D (24 bước, expected/actual, bằng chứng) | [`docs/qa/W01_smoke_test.md`](W01_smoke_test.md) | Xong, còn 1 ảnh Discover chụp tay |
+| Smoke test trên máy D (24 bước, expected/actual, bằng chứng) | [`docs/qa/W01_smoke_test.md`](W01_smoke_test.md) | Xong (có ảnh Discover + dashboard v1) |
 | Bằng chứng (log Producer/Spark, mapping, kết quả đối soát, import Kibana) | [`docs/qa/evidence/`](evidence/) | Xong |
 | Script đối soát `event_id` Producer ↔ ES + latency | [`scripts/qa/reconcile_events.py`](../../scripts/qa/reconcile_events.py) | Xong (chỉ đọc ES) |
 | Đặc tả Dashboard Batch + Stream + 3 nhãn | [`docs/dashboard/W01_dashboard_spec.md`](../dashboard/W01_dashboard_spec.md) | Nháp, chờ output contract |
@@ -48,7 +48,6 @@ Nhánh: `docs/w01-d-dashboard-qa` · Base: `main` @ `e3ba518` · Ngày: 17/11/20
 
 ## 5. Việc tiếp theo của D (W02)
 
-- [ ] Chụp ảnh Discover + dashboard v1 (xem smoke test §3).
 - [ ] Nhận phản hồi A về I-01…I-12; cập nhật trạng thái.
 - [ ] Chốt dashboard/QA theo `output_contract.md`; dựng D1 Pipeline Health, export `.ndjson`.
 - [ ] Thống nhất với A tham số Velocity (rate, partition), với B danh sách nguồn cho Variety.
