@@ -1,0 +1,7 @@
+﻿:: loading settings :: url = jar:file:/C:/Users/<user>/bigdata-sentiment-pipeline/.venv/Lib/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Spark Streaming v2 dang hoat dong...
+Kafka: social_events_v1
+Elasticsearch: social_events_v1
+Batch 0: da ghi 3 su kien vao social_events_v1
+Batch 1: da ghi 3 su kien vao social_events_v1
+Batch 2: da ghi 3 su kien vao social_events_v1

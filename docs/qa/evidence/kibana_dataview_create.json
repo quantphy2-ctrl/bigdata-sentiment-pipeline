@@ -1,0 +1,1 @@
+﻿{"type":"index-pattern","id":"social_events_v1","attributes":{"title":"social_events_v1","timeFieldName":"created_at"},"references":[],"migrationVersion":{"index-pattern":"7.11.0"},"coreMigrationVersion":"7.17.10","updated_at":"2026-11-17T09:28:57.114Z","version":"WzIxLDFd","namespaces":["default"]}

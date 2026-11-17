@@ -1,0 +1,18 @@
+﻿Producer events parsed: 12 (unique ids: 12)
+run_log | event_id | partition/offset (producer) | found | _id==event_id | partition/offset (ES) | missing_fields | latency_s
+docs/qa/evidence\producer_run1.log | demo_77db08c80b08498cb9f7201b8569e731 | 1/0 | YES | True | 1/0 | none | 26
+docs/qa/evidence\producer_run1.log | demo_f74676f283494f98958b282b7dd6dc88 | 2/0 | YES | True | 2/0 | none | 26
+docs/qa/evidence\producer_run1.log | demo_3284d1bd66744c77809c32251315ff26 | 2/1 | YES | True | 2/1 | none | 26
+docs/qa/evidence\producer_run2.log | demo_b6ee63dbf8c0488d92718749b1f75f37 | 0/0 | YES | True | 0/0 | none | 2
+docs/qa/evidence\producer_run2.log | demo_278fcc3134de4b58aa63d91200b3d6aa | 2/2 | YES | True | 2/2 | none | 2
+docs/qa/evidence\producer_run2.log | demo_db300069d040419ba4d3d55ee0c08f6e | 2/3 | YES | True | 2/3 | none | 2
+docs/qa/evidence\producer_run3.log | demo_425f80def7b94759b3be7de650c89664 | 1/1 | YES | True | 1/1 | none | 4
+docs/qa/evidence\producer_run3.log | demo_026b51cc9c0840f0b760ec0cdbaeeec0 | 2/4 | YES | True | 2/4 | none | 4
+docs/qa/evidence\producer_run3.log | demo_3c001093624d45e3b4d487b62ef0509d | 0/1 | YES | True | 0/1 | none | 4
+docs/qa/evidence\producer_run4_after_restart.log | demo_542d20e3b43742cfb44ec88997a53f06 | 2/5 | YES | True | 2/5 | none | 6
+docs/qa/evidence\producer_run4_after_restart.log | demo_678873856c884bd08ddab73353d4d56e | 0/2 | YES | True | 0/2 | none | 6
+docs/qa/evidence\producer_run4_after_restart.log | demo_d2ab869da9a246dfbfb2e35db6c07ece | 1/2 | YES | True | 1/2 | none | 6
+
+Missing in ES: 0 []
+Latency processed_at-collected_at (s): n=12 min=2 max=26 mean=9.50 p50=4 p95=26
+NOTE: second-level timestamps and n is small; not a benchmark.
