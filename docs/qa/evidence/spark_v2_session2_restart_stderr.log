@@ -1,0 +1,57 @@
+﻿python.exe : Ivy Default Cache set to: C:\Users\<user>\.ivy2\cache
+At C:\Users\<user>\run_spark.
+ps1:6 char:1
++ & .\.venv\Scripts\python.exe .\processing\spark_streaming_v2.py 1> do ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Ivy Default Cac...ydu\.ivy2\cache:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+The jars for the packages stored in: C:\Users\<user>\.ivy2\jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-e8a882cc-131f-4c53-b396-52162dadac69;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 439ms :: artifacts dl 147ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-e8a882cc-131f-4c53-b396-52162dadac69
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/30ms)
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/11/17 16:29:31 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming 
+DataFrames/Datasets and will be disabled.
+26/11/17 16:29:32 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, 
+enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+
+[Stage 0:>                                                          (0 + 1) / 1]
+
+[Stage 1:>                                                          (0 + 1) / 1]
+26/11/17 16:30:05 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 5000 
+milliseconds, but spent 5222 milliseconds

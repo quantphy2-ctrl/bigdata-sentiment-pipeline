@@ -1,0 +1,7 @@
+﻿:: loading settings :: url = jar:file:/C:/Users/<user>/bigdata-sentiment-pipeline/.venv/Lib/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Spark Streaming v2 dang hoat dong...
+Kafka: social_events_v1
+Elasticsearch: social_events_v1
+SUCCESS: The process with PID 38440 (child process of PID 36060) has been terminated.
+SUCCESS: The process with PID 36060 (child process of PID 35652) has been terminated.
+SUCCESS: The process with PID 35652 (child process of PID 24808) has been terminated.
